@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/headerbar">
+        <ImageButton
+            android:id="@id/sliding_menu_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/cd_menu"
+            android:src="@drawable/menu_btn"
+            android:background="@android:color/transparent"
+            android:onClick="onViewHideMenu" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/calendar_header"
+            style="@style/page_header" />
+        <ImageButton
+            android:id="@+id/refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/cd_refresh"
+            android:src="@drawable/refresh_btn"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+    <View android:layout_width="0dp" android:layout_height="25dp" />
+    <RelativeLayout
+        android:id="@+id/calendar_month_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ImageButton
+            android:id="@+id/calendar_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:contentDescription="@string/cd_previous"
+            android:src="@drawable/prev_btn"
+            android:background="@android:color/transparent" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/calendar_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/calendar_month_sample"
+            android:textSize="25sp"
+            android:textColor="@color/content_color" />
+        <ImageButton
+            android:id="@+id/calendar_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:contentDescription="@string/cd_next"
+            android:src="@drawable/next_btn"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+    <View android:layout_width="0dp" android:layout_height="10dp" />
+    <ViewFlipper
+        android:id="@+id/calendar_switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@android:style/Widget.ProgressBar.Small.Inverse" />
+        <ListView 
+            android:id="@+id/list_calendar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:divider="@drawable/divider" />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/check_network_connection"
+            android:src="@drawable/world" />
+    </ViewFlipper>
+</LinearLayout>

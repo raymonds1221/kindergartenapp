@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FontType">
+        <attr name="font">
+            <enum name="junior_feather_weight" value="0" />
+            <enum name="junior_welter_weight" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

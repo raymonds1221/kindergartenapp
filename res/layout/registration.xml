@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/headerbar">
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/cd_abort"
+            android:src="@drawable/abort_btn"
+            android:background="@android:color/transparent" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/registration_header"
+            style="@style/page_header" />
+    </RelativeLayout>
+    <View android:layout_width="0dp" android:layout_height="25dp" />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.antlerslabs.kindergarten.widget.KGTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="@string/user_information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                kgtv:font="junior_welter_weight" />
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <EditText 
+                    android:id="@+id/firstname"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/code_field" 
+                    android:hint="@string/hint_firstname"
+                    android:inputType="textPersonName" />
+                <EditText 
+                    android:id="@+id/lastname"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/code_field"
+                    android:hint="@string/hint_lastname"
+                    android:inputType="textPersonName" />
+                <EditText 
+                    android:id="@+id/email"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/code_field"
+                    android:hint="@string/hint_email_2"
+                    android:inputType="textEmailAddress" />
+                <FrameLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText 
+                        android:id="@+id/password"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="60dp"
+                        android:background="@drawable/code_field"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword" />
+                    <ImageButton 
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"  
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/forgot_btn"
+                        android:contentDescription="@string/cd_forgotpassword"
+                        android:background="@android:color/transparent"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:layout_width="0dp" android:layout_height="20dp" />
+            <com.antlerslabs.kindergarten.widget.KGTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/registration_desc1"
+                android:textSize="15sp"
+                kgtv:font="junior_welter_weight" />
+            <com.antlerslabs.kindergarten.widget.KGTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/registration_desc2"
+                android:textSize="15sp"
+                kgtv:font="junior_welter_weight" />
+        </LinearLayout>
+        <ImageButton 
+            android:id="@+id/create_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/create_btn"
+            android:contentDescription="@string/cd_registration"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+</LinearLayout>

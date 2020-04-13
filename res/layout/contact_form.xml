@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <RelativeLayout android:id="@+id/view01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/headerbar">
+        <ImageButton
+            android:id="@+id/abort_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/cd_menu"
+            android:src="@drawable/abort_btn"
+            android:background="@android:color/transparent" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/contact_form_header"
+            style="@style/page_header" />
+    </RelativeLayout>
+    <View android:id="@+id/view02" android:layout_width="0dp" android:layout_height="25dp" android:layout_below="@id/view01" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view02"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical">
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/kindergarden_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/contact_form_to_sample"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/content_color"
+            kgtv:font="junior_welter_weight" />
+        <EditText
+            android:id="@+id/contact_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/kindergarden_field"
+            android:inputType="textEmailSubject"
+            android:hint="@string/hint_title"
+            android:textSize="13sp" />
+        <EditText
+            android:id="@+id/contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/kindergarden_field"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"
+            android:textSize="13sp" />
+        <EditText
+            android:id="@+id/contact_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="top"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/post_field"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:hint="@string/hint_message_2"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <ImageButton 
+        android:id="@+id/send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/cd_send_message"
+        android:src="@drawable/send_form_btn"
+        android:background="@android:color/transparent" />
+</RelativeLayout>

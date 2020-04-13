@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="20dp"
+    android:background="@drawable/popup_bg"
+    android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:contentDescription="@string/cd_close"
+        android:src="@drawable/close_btn"
+        android:background="@android:color/transparent" />
+    <View android:layout_width="0dp" android:layout_height="15dp" />
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:text="@string/admin_header"
+        android:textColor="@color/content_color"
+        android:textSize="18sp"
+        kgtv:font="junior_welter_weight" />
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:text="@string/admin_text"
+        android:textSize="16sp"
+        android:textColor="@color/content_color"
+        kgtv:font="junior_welter_weight" />
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/name_field"
+        android:hint="@string/hint_firstname"
+        android:textSize="13sp"
+        android:paddingLeft="15dp" />
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:background="@drawable/name_field"
+        android:hint="@string/hint_lastname"
+        android:textSize="13sp"
+        android:paddingLeft="15dp" />
+    <View android:layout_width="0dp" android:layout_height="25dp" />
+    <ImageButton
+        android:id="@+id/send_name_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/cd_send_name"
+        android:src="@drawable/send_name_btn"
+        android:background="@android:color/transparent" />
+</LinearLayout>

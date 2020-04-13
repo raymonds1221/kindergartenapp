@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:id="@+id/kindergarden_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="5dp"
+	    android:gravity="center_vertical"
+	    android:paddingLeft="10dp"
+	    android:textStyle="bold"
+	    android:textSize="18sp"
+	    android:textColor="@color/content_color"
+	    android:background="@drawable/contact_slot"
+	    kgtv:font="junior_welter_weight" />
+    <ImageButton
+        android:id="@+id/delte_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        android:contentDescription="@string/cd_delete"
+        android:src="@drawable/delete_btn"
+        android:background="@android:color/transparent" />
+</LinearLayout>

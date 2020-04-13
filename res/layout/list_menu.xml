@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.antlerslabs.kindergarten.widget.KGTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/menu_latest_news"
+    android:drawableRight="@drawable/menu_arrow"
+    android:drawablePadding="10dp"
+    android:text="@string/menu_latest_news"
+    android:textSize="21sp"
+    android:textColor="@color/menu_color"
+    android:gravity="top"
+    style="@style/menu"
+    android:background="@drawable/kindergarden_selector" />

@@ -1,0 +1,19 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">Barnehagen</string>
+    <string name="api_url">http://kindergarden.antlerslabs.com/index.php/api/</string>
+    <string name="gcm_sender_id">871935645397</string>
+    
+    <string-array name="latest_news_menu">
+        <item>Kamera</item>
+        <item>Fil</item>
+    </string-array>
+    <string-array name="share_menu">
+        <item>SMS</item>
+        <item>Email</item>
+    </string-array>
+    <color name="inactive_calendar">#999896</color>
+    <color name="content_color">#3d3d3d</color>
+    <color name="footer_box">#c8c7c5</color>
+    <color name="menu_color">#a3a3a3</color>
+    <color name="highlight_color">#989898</color>
+</resources>

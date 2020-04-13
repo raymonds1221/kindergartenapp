@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+   	 <RelativeLayout
+    	 android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:background="@drawable/headerbar">
+     <ImageButton 
+         android:id="@+id/abort_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_centerVertical="true"
+         android:contentDescription="@string/cd_abort"
+         android:src="@drawable/abort_btn"
+         android:background="@android:color/transparent" />
+     <com.antlerslabs.kindergarten.widget.KGTextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:text="@string/new_post_header"
+         style="@style/page_header" />
+     <ImageButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="10dp"
+         android:layout_centerVertical="true"
+         android:layout_alignParentRight="true"
+         android:contentDescription="@string/cd_photo"
+         android:src="@drawable/photo_btn"
+         android:background="@android:color/transparent"
+         android:onClick="onChooseImage" />
+ </RelativeLayout>
+ <View android:layout_width="0dp" android:layout_height="25dp" />
+ <ScrollView
+     android:layout_width="fill_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1">
+     <LinearLayout 
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:orientation="vertical">
+      <ImageButton
+       android:id="@+id/latest_news_image"
+       android:layout_width="fill_parent"
+       android:layout_height="150dp"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="10dp"
+       android:contentDescription="@string/cd_default_image"
+       android:src="@drawable/default_img"
+       android:background="@android:color/transparent"
+       android:scaleType="center"
+       android:onClick="onChooseImage" />
+   <EditText
+       android:id="@+id/latest_news_title"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginBottom="10dp"
+       android:paddingLeft="10dp"
+       android:hint="@string/hint_title"
+       android:textSize="13sp"
+       android:background="@drawable/title_field"
+       android:inputType="text" />
+   <EditText 
+       android:id="@+id/latest_news_details"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginBottom="10dp"
+       android:paddingLeft="10dp"
+       android:paddingTop="5dp"
+       android:hint="@string/hint_post"
+       android:textSize="13sp"
+       android:background="@drawable/post_field"
+       android:inputType="textMultiLine"
+       android:singleLine="false"
+       android:gravity="top"
+       android:maxWidth="300dp" />
+  </LinearLayout>
+ </ScrollView>
+ <ImageButton 
+     android:id="@+id/publish_btn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_horizontal"
+     android:layout_marginBottom="10dp"
+     android:contentDescription="@string/cd_publish"
+     android:src="@drawable/publish_btn"
+     android:background="@android:color/transparent" />
+</LinearLayout>

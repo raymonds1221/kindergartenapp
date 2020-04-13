@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/headerbar">
+        <ImageButton
+            android:id="@id/sliding_menu_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/cd_menu"
+            android:src="@drawable/menu_btn"
+            android:background="@android:color/transparent" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/latest_news_header"
+            style="@style/page_header" />
+        <ImageButton
+            android:id="@+id/new_post_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/cd_menu"
+            android:src="@drawable/new_post_btn"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <View android:layout_width="0dp" android:layout_height="25dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/latest_news_update_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:visibility="gone" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/latest_news_last_update"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_news_last_update"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/content_color"
+            android:drawableRight="@drawable/drag_update"
+            kgtv:font="junior_welter_weight" />
+        <ViewFlipper
+            android:id="@+id/latest_news_switcher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@android:style/Widget.ProgressBar.Small.Inverse" />
+            <com.antlerslabs.kindergarten.widget.PullToRefreshListView
+                android:id="@+id/list_latest_news"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="10dp"
+	            android:divider="@null"
+	            android:dividerHeight="20dp"
+	            android:cacheColorHint="@android:color/transparent"
+	            android:scrollbars="none"
+	            android:fadingEdge="none"
+	            android:fadeScrollbars="false" />
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/check_network_connection"
+                android:src="@drawable/world" />
+        </ViewFlipper>
+        <ProgressBar 
+            android:id="@+id/load_more_latest_news_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

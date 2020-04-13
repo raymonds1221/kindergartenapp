@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:id="@+id/kindergarden_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/menu_color" />
+    <View android:layout_width="0dp" android:layout_height="20dp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cd_divider"
+        android:src="@drawable/menu_divider" />
+    <ListView 
+        android:id="@+id/list_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:divider="@drawable/menu_divider"
+        android:fadingEdge="none"/>
+    <View android:layout_width="0dp" android:layout_height="20dp" />
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/menu_my_kindergaden"
+        android:textSize="20sp"
+        android:textColor="@color/menu_color"
+        android:background="@drawable/list_header" />
+    <ListView
+        android:id="@+id/kindergarden_list"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:divider="@drawable/menu_divider" />
+</LinearLayout>

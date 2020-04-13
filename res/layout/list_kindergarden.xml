@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kindergarden_selector">
+    <com.antlerslabs.kindergarten.widget.KGTextView 
+        android:id="@+id/kindergarden_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" 
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/kindergarden_name_sample"
+        android:textColor="@color/menu_color"
+        android:textSize="18sp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:shadowColor="#99000000" />
+    <com.antlerslabs.kindergarten.widget.KGTextView 
+        android:id="@+id/notification_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="@string/kindergarden_notification_sample"
+        android:textColor="@android:color/white" 
+        android:background="@drawable/notification_icon" />
+</LinearLayout>

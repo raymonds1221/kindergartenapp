@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/headerbar">
+        <ImageButton
+            android:id="@id/sliding_menu_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/cd_menu"
+            android:src="@drawable/menu_btn"
+            android:background="@android:color/transparent"
+            android:onClick="onViewHideMenu" />
+        <com.antlerslabs.kindergarten.widget.KGTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/contactus_header"
+            style="@style/page_header" />
+    </RelativeLayout>
+    <View android:layout_width="0dp" android:layout_height="25dp" />
+    <ViewFlipper
+        android:id="@+id/contactus_switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@android:style/Widget.ProgressBar.Small.Inverse" />
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:orientation="vertical">
+	        <com.antlerslabs.kindergarten.widget.KGTextView
+	            android:id="@+id/contactus_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/contactus_title_sample"
+	            android:textStyle="bold"
+	            android:textSize="18sp"
+	            kgtv:font="junior_welter_weight" />
+	        <com.antlerslabs.kindergarten.widget.KGTextView
+	            android:id="@+id/contactus_address"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/contactus_address_sample"
+	            android:textSize="17sp"
+	            android:textColor="@color/content_color"
+	            kgtv:font="junior_welter_weight" />
+	        <com.antlerslabs.kindergarten.widget.KGTextView
+	            android:id="@+id/contactus_email"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:drawableRight="@drawable/form_btn"
+	            android:drawablePadding="5dp"
+	            android:text="@string/contactus_email_sample"
+	            android:textSize="17sp"
+	            android:textColor="@color/content_color"
+	            android:clickable="true"
+	            kgtv:font="junior_welter_weight" />
+	        <View android:layout_width="0dp" android:layout_height="30dp" />
+	        <com.antlerslabs.kindergarten.widget.KGTextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="7dp"
+	            android:text="@string/main_contact"
+	            android:textSize="18sp"	
+	            android:textColor="@color/content_color"
+	            kgtv:font="junior_welter_weight" />
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <com.antlerslabs.kindergarten.widget.KGTextView
+	                android:id="@+id/admin_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:gravity="center_vertical"
+		            android:paddingLeft="10dp"
+		            android:textStyle="bold"
+		            android:textSize="18sp"
+		            android:textColor="@color/content_color"
+		            android:background="@drawable/contact_slot"
+		            kgtv:font="junior_welter_weight" />
+	            <ImageButton 
+	                android:id="@+id/call_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:contentDescription="@string/cd_call"
+	                android:src="@drawable/call_btn"
+	                android:background="@android:color/transparent" />
+	        </LinearLayout>
+	        <View android:layout_width="0dp" android:layout_height="25dp" />
+	        <com.antlerslabs.kindergarten.widget.KGTextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="7dp"
+	            android:text="@string/contact_list"
+	            android:textSize="18sp"
+	            android:textColor="@color/content_color"
+	            kgtv:font="junior_welter_weight" />
+	        <ListView
+	            android:id="@+id/list_contacts"
+	            android:layout_width="fill_parent"
+	            android:layout_height="200dp"
+	            android:divider="@null"
+	            android:dividerHeight="5dp" />
+	    </LinearLayout>
+	    <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/check_network_connection"
+            android:src="@drawable/world" />
+    </ViewFlipper>
+</LinearLayout>

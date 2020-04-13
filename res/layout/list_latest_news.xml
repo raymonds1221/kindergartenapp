@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <View android:layout_width="0dp" android:layout_height="8dp" />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <TableRow
+            android:background="@drawable/content_top">
+            <View android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+            android:background="@drawable/content_mid">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingBottom="10dp"
+		            android:paddingLeft="3dp"
+		            android:paddingRight="3dp"
+		            android:orientation="vertical">
+		            <ImageView
+				        android:id="@+id/latest_news_image"
+				        android:layout_width="fill_parent"
+				        android:layout_height="150dp"
+				        android:layout_gravity="center_horizontal"
+				        android:contentDescription="@string/cd_latest_news_image"
+				        android:src="@drawable/image_example"
+				        android:scaleType="center" />
+		        </LinearLayout>
+		        <com.antlerslabs.kindergarten.widget.KGTextView
+		            android:id="@+id/latest_news_title"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:text="@string/latest_news_title_sample"
+		            android:textSize="20sp"
+		            android:textColor="@color/content_color"
+		            android:singleLine="false"
+		            android:maxHeight="100dp"
+		            kgtv:font="junior_welter_weight" />
+		        <com.antlerslabs.kindergarten.widget.KGTextView
+		            android:id="@+id/latest_news_details"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:paddingBottom="10dp"
+		            android:text="@string/latest_news_content_sample"
+		            android:textColor="@color/content_color"
+		            android:textSize="18sp"
+		            android:singleLine="false"
+		            kgtv:font="junior_welter_weight" />
+		        <RelativeLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content">
+		            <ImageButton 
+		                android:id="@+id/edit_btn"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:paddingLeft="10dp"
+		                android:contentDescription="@string/cd_edit"
+		                android:src="@drawable/edit_post"
+		                android:background="@android:color/transparent" />
+		            <com.antlerslabs.kindergarten.widget.KGTextView
+		                android:id="@+id/latest_news_publisher"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		                android:paddingRight="10dp"
+		                android:text="@string/latest_news_publisher_sample"
+		                android:textSize="15sp"
+		                android:textColor="@color/footer_box"
+		                kgtv:font="junior_welter_weight" />
+		        </RelativeLayout>
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            android:background="@drawable/content_bottom">
+            <View android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

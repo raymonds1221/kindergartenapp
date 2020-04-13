@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kgtv="http://schemas.android.com/apk/res/com.antlerslabs.kindergarten"
+    android:layout_width="wrap_content"
+    android:layout_height="210dp"
+    android:orientation="vertical"
+    android:background="@drawable/popup_bg">
+    <View android:layout_width="0dp" android:layout_height="50dp"/>
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/admin_approval_title"
+        android:textSize="17sp"
+        kgtv:font="junior_welter_weight" />
+    <com.antlerslabs.kindergarten.widget.KGTextView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/admin_approval"
+        android:textSize="15sp"
+        kgtv:font="junior_welter_weight" />
+    <ImageButton 
+        android:id="@+id/ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ok_btn"
+        android:contentDescription="@string/cd_ok"
+        android:background="@android:color/transparent" />
+</LinearLayout>
